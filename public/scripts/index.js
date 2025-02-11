@@ -52,7 +52,7 @@ loadData();
 
 let heroSection = async function () {
     try {
-        const response = await fetch('https://api.aviationstack.com/v1/flights?access_key=46c4f799ad42c1b79a1a09acb661faef');
+        const response = await fetch('https://api.aviationstack.com/v1/flights?access_key=d02699bdb43ecf65778facf9c2a22305');
         const data = await response.json();
         console.log('API Response:', data);
         
@@ -255,7 +255,7 @@ async function handleSubmit(event) {
     try {
         const response = await fetch('https://docs.google.com/forms/d/e/1FAIpQLSd9vbR-T2ChqHoghzk-CvKa-UB89PKwX0tbie7fBS6kY1Pt9w/formResponse', {
             method: 'POST',
-           // mode: 'no-cors', // This is important for Google Forms  
+            mode: 'no-cors', // This is important for Google Forms  
             body: formData
         });
 
@@ -273,6 +273,9 @@ async function handleSubmit(event) {
     }
 };
 
+
+
+// hero section button
 document.addEventListener('click', function(event) {
     const fromContainer = document.querySelector('.from-container');
     const fromSummary = document.querySelector('details:nth-child(1) summary');
