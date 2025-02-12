@@ -17,7 +17,7 @@
     <!--NavBar-->
 
     <div
-        class="md:hidden flex w-fit h-fit bg-[#F5F5F5] absolute top-10 right-12 z-50 p-2 px-8 rounded-l-xl rounded-br-xl menu-box hidden">
+        class="md:hidden flex w-fit h-fit bg-[#F5F5F5] absolute top-10 right-12 z-50 p-2 px-8 rounded-l-xl rounded-br-xl menu-box hidden overflow-hidden">
         <ul class="flex flex-col items-center justify-center gap-4 text-navBar text-sm py-2">
             <li class="border-b border-navBar">
                 <a href="">Home</a>
@@ -52,16 +52,16 @@
         </div>
     </nav>
     <!-- Hero Section -->
-    <div class="w-full h-[900px] bg-heroImage bg-cover bg-center bg-no-repeat relative sm:max-xl:text-center">
+    <div class="w-full lg:h-[900px] h-[600px] bg-black bg-heroImage bg-cover bg-center bg-no-repeat relative sm:max-xl:text-center overflow-hidden overflow-y-auto scrollbar-none">
 
         <img class="hidden md:flex sm:h-[900px] sm:w-full" src="./assets/background.jpg" alt="background">
-        <img class="flex md:hidden sm:h-[900px] sm:w-full h-[764px]" src="./assets/background_mobile.jpeg"
+        <img class="flex md:hidden sm:h-[900px] sm:w-full h-[764px] " src="./assets/background_mobile.jpeg"
             alt="background">
         <h1 class="absolute top-24  text-white lg:text-[65px] sm:text-[30px]  text-center font-bold">Your Ultimate
             Travel Companion for
             Seamless Adventures</h1>
         <div
-            class="lg:w-[90%] lg:h-[500px] sm:w-[80%] sm:h-[500px] w-[90%] bg-[#002855] absolute md:top-[150px] -top-4 left-[50%] translate-x-[-50%] translate-y-[50%] rounded-t-[30px] px-10 flex flex-col items-center justify-start gap-12">
+            class="lg:w-[90%] lg:h-[500px] sm:w-[80%] sm:h-[500px] w-[90%] bg-[#002855] absolute md:top-[150px] -top-4 left-[50%] translate-x-[-50%] translate-y-[50%] rounded-t-[30px] px-10 flex flex-col items-center justify-start gap-12 ">
             <div
                 class="lg:w-fit w-full lg:h-24 h-24 sm:w-full sm:h-24  bg-white  rounded-xl md:-mt-12 -mt-4 flex items-center justify-between pr-4 md:gap-x-12 gap-x-8 overflow-hidden overflow-x-auto">
                 <div
@@ -119,11 +119,12 @@
 
             <!--open api connection-->
             <div id="tab-section">
-                <div id="heroSectionContainer" class="relative ">
+                <div id="heroSectionContainer" class="relative z-30  ">
                     <template id="heroSectionTemplate">
                         <div
-                            class="bg-transparent border h-50 text-white p-6 rounded-lg w-full max-w-4xl cursor-pointer transition-colors duration-300 overflow-hidden">
+                            class="bg-transparent border h-50  text-white p-6 rounded-lg w-full max-w-4xl cursor-pointer transition-colors duration-300 ">
                             <div class="grid md:grid-cols-5 grid-cols-2 gap-8  ">
+                                <!--grid md:grid-cols-5 grid-cols-2 gap-8 -->
                                 <details class="space-y-1 relative border-r">
                                     <summary class="list-none cursor-pointer">
                                         <p class="text-gray-400 text-sm">From</p>
@@ -131,7 +132,7 @@
                                         <p class="text-xs text-gray-400 time-zone"></p>
                                     </summary>
                                     <div
-                                        class="from-container absolute top-full left-0 w-55 h-60 bg-blue-400 border border-blue-400 mt-2 p-4 rounded-lg shadow-xl z-20 overflow-y-auto ">
+                                        class="from-container absolute top-full left-0 w-55 h-60 bg-blue-400 border border-blue-400 mt-2 p-4 rounded-lg shadow-xl z-50 overflow-y-auto  scrollbar-none">
                                         <input type="text" placeholder="Search cities..."
                                             class="w-full p-3 mb-3 rounded-lg bg-[#002855] border whiteborder-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-300 sticky top-0" />
                                         <div class="space-y-2 max-h-60 scrollbar-thin ">
@@ -388,9 +389,9 @@
         </div>
     </div>
     <!--journey beyond-->
-    <div class="w-[1350px] h-[560px] px-8 ">
+    <div class="w-[1350px] h-[560px] lg:px-8 px-1">
         <div
-            class=" w-full h-[560px]  py-8 px-8  bg-[url('../assets/bgnew.jpg')] bg-cover bg-center bg-no-repeat rounded-t-md  flex lg:flex-row flex-col ">
+            class=" w-full h-[560px]  py-8 lg:px-8 px-1  bg-[url('../assets/bgnew.jpg')] bg-cover bg-center bg-no-repeat rounded-t-md  flex lg:flex-row flex-col ">
 
             <!-- Left text section -->
             <div class="w-1/2 flex items-center px-8 py-4">
@@ -402,7 +403,7 @@
 
             <!-- Right form section -->
             <div class="w-1/2 flex justify-center items-center">
-                <div class="lg:w-[480px] w-[300px] lg:h-[500px] h-[320px] bg-white rounded-md shadow-lg ">
+                <div class="lg:w-[480px] w-[150px] lg:h-[500px] h-[320px] bg-white rounded-md shadow-lg ">
                     <form id="contactForm" onsubmit="handleSubmit(event)">
                         <div
                             class="w-full lg:h-20 h-5 flex items-center justify-center text-blue-600 text-lg font-bold">
